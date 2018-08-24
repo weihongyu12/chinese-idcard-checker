@@ -1,5 +1,6 @@
 /**
  * 中国居民身份证检查
+ * @author weihongyu12<weihongyu12@outlook.com>
  */
 class IDCardChecker {
   private provinces = {
@@ -65,9 +66,7 @@ class IDCardChecker {
       const year = this.getYear(dateString);
       const month = this.getMonth(dateString);
       const date = this.getDay(dateString);
-
       const fullDate = new Date(`${year}-${month}-${date}`);
-
       if (fullDate && fullDate.getMonth() === month - 1) {
         return true;
       }

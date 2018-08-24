@@ -28,8 +28,8 @@ describe('验证中国居民身份证', () => {
   });
 
   it('获取出生日期', () => {
-    const result = IDCardChecker.getBirthDate('11010519491231002X');
-    expect(result).to.equal(new Date('1949-12-31'));
+    const result = IDCardChecker.getBirthDate('11010519491231002X').getTime();
+    expect(result).to.equal(new Date('1949-12-31').getTime());
   });
 
   it('获取性别', () => {
