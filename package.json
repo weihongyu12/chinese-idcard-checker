@@ -1,0 +1,27 @@
+{
+  "name": "chinese-idcard-checker",
+  "version": "1.0.0",
+  "description": "中国居民身份证验证器",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc index.ts",
+    "test": "mocha -r ts-node/register index.test.ts",
+    "format": "prettier-eslint --write \"index.ts\" \"index.test.ts\""
+  },
+  "author": "weihongyu12",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "prettier-eslint-cli": "^4.7.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  }
+}
