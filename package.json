@@ -32,6 +32,7 @@
       ".ts"
     ],
     "exclude": [
+      "dist/**/*",
       "test/**/*.ts"
     ],
     "reporter": [
