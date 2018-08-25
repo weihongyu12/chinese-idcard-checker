@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import IDCardChecker from './index';
+import IDCardChecker from '../src/IDCardChecker';
 
 describe('验证中国居民身份证', () => {
   it('正确的身份证', () => {
