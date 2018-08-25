@@ -44,15 +44,12 @@ if(pattern.test(idCardNum)){
 
 ### idCardChecker.pattern() ⇒ <code>RegExp</code>
 返回正则表达式
-
-**Kind**: instance method of [<code>IDCardChecker</code>](#IDCardChecker)  
+ 
 **Returns**: <code>RegExp</code> - /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/  
 <a name="IDCardChecker+validate"></a>
 
 ### idCardChecker.validate(idCardNum) ⇒ <code>boolean</code>
 验证身份证有效性
-
-**Kind**: instance method of [<code>IDCardChecker</code>](#IDCardChecker)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -63,7 +60,6 @@ if(pattern.test(idCardNum)){
 ### idCardChecker.getProvince(idCardNum) ⇒ <code>string</code> \| <code>null</code>
 获取省份
 
-**Kind**: instance method of [<code>IDCardChecker</code>](#IDCardChecker)  
 **Returns**: <code>string</code> \| <code>null</code> - 身份证号码  
 
 | Param | Type | Description |
@@ -75,7 +71,6 @@ if(pattern.test(idCardNum)){
 ### idCardChecker.getBirthDate(idCardNum) ⇒ <code>Date</code> \| <code>null</code>
 获取出生日期
 
-**Kind**: instance method of [<code>IDCardChecker</code>](#IDCardChecker)  
 **Returns**: <code>Date</code> \| <code>null</code> - 出生日期  
 
 | Param | Type | Description |
@@ -87,7 +82,6 @@ if(pattern.test(idCardNum)){
 ### idCardChecker.getGender(idCardNum) ⇒ <code>string</code> \| <code>null</code>
 获取性别
 
-**Kind**: instance method of [<code>IDCardChecker</code>](#IDCardChecker)  
 **Returns**: <code>string</code> \| <code>null</code> - '男','女'  
 
 | Param | Type | Description |
@@ -95,5 +89,7 @@ if(pattern.test(idCardNum)){
 | idCardNum | <code>string</code> | 身份证号码 |
 
 ## LICENSE
+
+MIT License
 
 
