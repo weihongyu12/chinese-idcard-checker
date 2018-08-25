@@ -32,10 +32,10 @@
       ".ts"
     ],
     "exclude": [
-      "**/*.d.ts"
+      "test/**/*.ts"
     ],
     "reporter": [
-      "html"
+      "lcovonly"
     ],
     "all": true
   }

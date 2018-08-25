@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "commonjs",
     "strict": true,
     "importHelpers": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "baseUrl": ".",
-    "types": [
-      "node"
-    ]
+    "baseUrl": "."
   },
   "include": [
     "src/**/*.ts",
