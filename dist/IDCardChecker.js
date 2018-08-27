@@ -3,7 +3,7 @@
  * IDCardChecker 中国居民身份证检查
  * @author weihongyu12<weihongyu12@outlook.com>
  * @licence MIT License
- * @version 1.0.0
+ * @version 1.0.1
  */
 exports.__esModule = true;
 /**
@@ -92,7 +92,7 @@ var IDCardChecker = /** @class */ (function () {
     IDCardChecker.prototype.checkCode = function (idCardNum) {
         var pattern = this.pattern();
         var factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
-        var parity = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
+        var parity = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];
         var code = idCardNum.substring(17);
         if (pattern.test(idCardNum)) {
             var sum_1 = 0;
@@ -101,7 +101,7 @@ var IDCardChecker = /** @class */ (function () {
                     sum_1 += parseInt(item) * factor[index];
                 }
             });
-            if (parity[sum_1 % 11] == code.toUpperCase()) {
+            if (parity[sum_1 % 11] === code.toUpperCase()) {
                 return true;
             }
         }

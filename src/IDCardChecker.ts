@@ -2,7 +2,7 @@
  * IDCardChecker 中国居民身份证检查
  * @author weihongyu12<weihongyu12@outlook.com>
  * @licence MIT License
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /**
@@ -93,7 +93,7 @@ class IDCardChecker {
   private checkCode(idCardNum: string): boolean {
     const pattern = this.pattern();
     const factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
-    const parity = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
+    const parity = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];
     const code = idCardNum.substring(17);
     if (pattern.test(idCardNum)) {
       let sum = 0;
@@ -102,7 +102,7 @@ class IDCardChecker {
           sum += parseInt(item) * factor[index];
         }
       });
-      if (parity[sum % 11] == code.toUpperCase()) {
+      if (parity[sum % 11] === code.toUpperCase()) {
         return true;
       }
     }

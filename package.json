@@ -1,13 +1,14 @@
 {
   "name": "chinese-idcard-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "中国居民身份证验证器",
   "keywords": [
     "id-card",
     "checker",
     "validation"
   ],
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
   "scripts": {
     "build": "tsc src/IDCardChecker.ts --outDir dist && uglifyjs dist/IDCardChecker.js --output dist/IDCardChecker.min.js --compress --mangle --comments /^!/",
     "test": "nyc mocha test/**/*.ts",
