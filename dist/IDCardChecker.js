@@ -3,7 +3,7 @@
  * IDCardChecker 中国居民身份证检查
  * @author weihongyu12<weihongyu12@outlook.com>
  * @licence MIT License
- * @version 1.0.1
+ * @version 1.0.2
  */
 exports.__esModule = true;
 /**
