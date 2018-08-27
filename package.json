@@ -7,7 +7,7 @@
     "checker",
     "validation"
   ],
-  "main": "dist/index.js",
+  "main": "dist/IDCardChecker.js",
   "typings": "types/index.d.ts",
   "scripts": {
     "build": "tsc src/IDCardChecker.ts --outDir dist && uglifyjs dist/IDCardChecker.js --output dist/IDCardChecker.min.js --compress --mangle --comments /^!/",
