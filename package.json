@@ -47,7 +47,8 @@
     ],
     "exclude": [
       "dist/**/*",
-      "test/**/*.ts"
+      "test/**/*.ts",
+      "types/**/*.ts"
     ],
     "reporter": [
       "lcovonly"
