@@ -10,7 +10,7 @@
   "main": "dist/IDCardChecker.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "build": "tsc src/IDCardChecker.ts --outDir dist && uglifyjs dist/IDCardChecker.js --output dist/IDCardChecker.min.js --compress --mangle --comments /^!/",
+    "build": "tsc src/IDCardChecker.ts --lib esnext --outDir dist && uglifyjs dist/IDCardChecker.js --output dist/IDCardChecker.min.js --compress --mangle --comments /^!/",
     "test": "nyc mocha test/**/*.ts",
     "format": "prettier-eslint --write \"src/**/*.ts\" \"test/**/*.ts\""
   },
@@ -37,7 +37,7 @@
     "nyc": "^15.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "source-map-support": "^0.5.16",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.5.4",
     "typescript": "^3.7.4",
     "uglify-js": "^3.7.3"
   },

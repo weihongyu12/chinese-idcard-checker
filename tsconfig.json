@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2015",
     "module": "commonjs",
     "strict": true,
     "importHelpers": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noEmitOnError": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": [
+      "mocha",
+      "chai"
+    ],
+    "lib": [
+      "esnext"
+    ]
   },
   "include": [
     "src/**/*.ts",
