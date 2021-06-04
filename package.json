@@ -10,7 +10,7 @@
   "main": "dist/IDCardChecker.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "build": "tsc src/IDCardChecker.ts --lib esnext --outDir dist && uglifyjs dist/IDCardChecker.js --output dist/IDCardChecker.min.js --compress --mangle --comments /^!/",
+    "build": "tsc --module esnext",
     "test": "nyc mocha -r ts-node/register test/**/*.ts",
     "format": "eslint --fix \"src/**/*.ts\" \"test/**/*.ts\""
   },
@@ -30,7 +30,6 @@
   "devDependencies": {
     "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.0",
-    "@types/node": "^12.20.14",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
     "chai": "^4.2.0",
