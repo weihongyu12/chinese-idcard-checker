@@ -3,8 +3,16 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['airbnb-base'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    parser: 'typescript-eslint-parser',
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
+  plugins: [
+    '@typescript-eslint',
+  ],
+  extends: [
+    'airbnb-typescript/base',
+    'plugin:@typescript-eslint/recommended'
+  ],
 };
