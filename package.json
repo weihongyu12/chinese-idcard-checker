@@ -53,6 +53,7 @@
     "exclude": [
       "dist/**/*",
       "test/**/*.ts",
+      "test/**/*.js",
       "types/**/*.ts"
     ],
     "reporter": [
