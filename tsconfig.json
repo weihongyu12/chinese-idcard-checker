@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "module": "commonjs",
+    "module": "esnext",
     "strict": true,
     "importHelpers": true,
     "moduleResolution": "node",
@@ -16,13 +16,14 @@
     ],
     "lib": [
       "esnext"
-    ]
+    ],
+    "outDir": "dist"
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
+    "src",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test"
   ]
 }
