@@ -17,24 +17,29 @@ yarn add chinese-idcard-checker
 ## 用法
 
 ```javascript
-import IDCardChecker from 'chinese-idcard-checker';
+import {
+  validate,
+  province,
+  birthDate,
+  gender,
+  pattern,
+} from 'chinese-idcard-checker';
 // or 
 // const IDCardChecker = require('chinese-idcard-checker'); 
 
 // 验证身份证有效性
-IDCardChecker.validate(idCardNum); // true or false
+validate(idCardNum); // true or false
 
 // 获取省份
-IDCardChecker.getProvince(idCardNum); // '北京市'
+province(idCardNum); // '北京市'
 
 // 获取出生日期
-IDCardChecker.getBirthDate(idCardNum);  // new Date('1949-10-1')
+birthDate(idCardNum);  // new Date('1949-10-1')
 
 // 获取性别
-IDCardChecker.getGender(idCardNum); // '男','女'
+gender(idCardNum); // '男','女'
 
 // 返回正则表达式常量
-const pattern = IDCardChecker.pattern(); // /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
 if(pattern.test(idCardNum)){
   // ...
 }
@@ -42,54 +47,51 @@ if(pattern.test(idCardNum)){
 
 ## API
 
-### idCardChecker.pattern() ⇒ <code>RegExp</code>
+### pattern ⇒ `RegExp`
+
 返回正则表达式
  
-**Returns**: <code>RegExp</code> - /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/  
-<a name="IDCardChecker+validate"></a>
+**Returns**: `RegExp` - `/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/`
 
-### idCardChecker.validate(idCardNum) ⇒ <code>boolean</code>
+### validate(idCardNum) ⇒ `boolean`
+
 验证身份证有效性
 
 | Param | Type | Description |
 | --- | --- | --- |
-| idCardNum | <code>string</code> | 身份证号码 |
+| idCardNum | `string` | 身份证号码 |
 
-<a name="IDCardChecker+getProvince"></a>
+### province(idCardNum) ⇒ `string` | `null`
 
-### idCardChecker.getProvince(idCardNum) ⇒ <code>string</code> \| <code>null</code>
-获取省份
+获取身份证所在省份
 
-**Returns**: <code>string</code> \| <code>null</code> - 身份证号码  
+**Returns**: string | 'null' - 省份  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| idCardNum | <code>string</code> | 身份证号码 |
+| idCardNum | `string` | 身份证号码 |
 
-<a name="IDCardChecker+getBirthDate"></a>
-
-### idCardChecker.getBirthDate(idCardNum) ⇒ <code>Date</code> \| <code>null</code>
+### birthDate(idCardNum) ⇒ `Date` | `null`
 获取出生日期
 
-**Returns**: <code>Date</code> \| <code>null</code> - 出生日期  
+**Returns**: `Date` | `null` - 出生日期  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| idCardNum | <code>string</code> | 身份证号码 |
+| idCardNum | `string` | 身份证号码 |
 
 <a name="IDCardChecker+getGender"></a>
 
-### idCardChecker.getGender(idCardNum) ⇒ <code>string</code> \| <code>null</code>
+### gender(idCardNum) ⇒ `string` | `null`
+
 获取性别
 
-**Returns**: <code>string</code> \| <code>null</code> - '男','女'  
+**Returns**: `string` | `null` - '男','女'  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| idCardNum | <code>string</code> | 身份证号码 |
+| idCardNum | `string` | 身份证号码 |
 
 ## LICENSE
 
 MIT License
-
-
